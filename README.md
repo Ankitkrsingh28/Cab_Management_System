@@ -1,4 +1,4 @@
-# Java Swing Booking System
+# Cab Booking System (GUI BASED)
 
 This is a Java-based desktop application for a booking and payment system built using **Java Swing** for the GUI and **JDBC** for database connectivity. The application allows users to register, log in, book services, and make payments through a simple and interactive graphical interface.
 
