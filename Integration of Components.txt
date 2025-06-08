@@ -1,0 +1,4 @@
+if (rs.next()) {
+    dispose(); // Close login window
+    new MainMenuFrame(); // Open main menu
+}

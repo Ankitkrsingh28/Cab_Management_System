@@ -1,0 +1,4 @@
+if (cardNumber.isEmpty() || !cardNumber.matches("\\d{16}")) {
+    JOptionPane.showMessageDialog(null, "Please enter a valid 16-digit card number");
+    return;
+}

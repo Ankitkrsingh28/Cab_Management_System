@@ -1,0 +1,7 @@
+payButton.addActionListener(e -> {
+    String cardNumber = cardField.getText();
+    String expiry = expiryField.getText();
+    String cvv = cvvField.getText();
+
+    JOptionPane.showMessageDialog(null, "Payment Processed Successfully");
+});

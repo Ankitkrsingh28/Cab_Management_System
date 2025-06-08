@@ -1,0 +1,23 @@
+loginButton.addActionListener(e -> {
+    String user = userText.getText();
+    String pass = new String(passwordText.getPassword());
+
+    try {
+        Connection con = DatabaseConnection.getConnection();
+        PreparedStatement stmt = con.prepareStatement("SELECT * FROM users WHERE username=? AND password=?");
+        stmt.setString(1, user);
+        stmt.setString(2, pass);
+        ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            JOptionPane.showMessageDialog(null, "Login Successful");
+            dispose();
+            new MainMenuFrame();
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid Credentials");
+        }
+
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(null, "Database error");
+    }
+});

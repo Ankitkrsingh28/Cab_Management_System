@@ -1,0 +1,10 @@
+try {
+    Connection con = DatabaseConnection.getConnection();
+    PreparedStatement stmt = con.prepareStatement("INSERT INTO bookings (item, quantity) VALUES (?, ?)");
+    stmt.setString(1, item);
+    stmt.setString(2, quantity);
+    stmt.executeUpdate();
+    JOptionPane.showMessageDialog(null, "Booking Successful");
+} catch (SQLException ex) {
+    JOptionPane.showMessageDialog(null, "Booking Failed: " + ex.getMessage());
+}
